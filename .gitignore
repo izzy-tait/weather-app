@@ -1,0 +1,21 @@
+# Frontend (Angular)
+weather-dashboard-frontend/node_modules
+weather-dashboard-frontend/.angular/cache
+weather-dashboard-frontend/dist
+weather-dashboard-frontend/tmp
+weather-dashboard-frontend/out-tsc
+
+# Backend (Express)
+weather-dashboard-backend/node_modules
+
+# IDEs/editors
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Misc
+.DS_Store
+Thumbs.db
