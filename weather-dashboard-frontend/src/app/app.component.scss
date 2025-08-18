@@ -1,0 +1,58 @@
+@import 'src/styles/variables'; 
+
+.main-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.weather-card {
+    width: 90vw;
+    max-width: 900px;
+    min-width: 280px;
+    min-height: 500px;
+    height: 80vh;
+    margin: 2rem auto;
+    box-sizing: border-box;
+    padding: 2rem;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.round-input {
+    border-radius: 40px;
+}
+
+.input {
+    background-color: $primary-light;
+    border: none;
+    outline-width: 0;
+    height: 5%;
+}
+
+#search-city {
+    background-color: $primary-light;
+    border: none;
+    outline-width: 0;
+    height: 5%;
+}
+
+input::placeholder {
+    color: $secondary-light;
+    opacity: 1;
+    text-align: center;
+}
+
+input {
+    color: white;
+    text-align: center;
+}
+  
+
+.separator {
+    height: 3vh;
+}

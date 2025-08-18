@@ -1,0 +1,36 @@
+<mat-card
+    *ngIf="currentWeather$ | async as currentWeather">  
+    <mat-card-title-group 
+      [ngStyle]="getWeatherImage(currentWeather) ? {'background-image': 'url(' + getWeatherImage(currentWeather) + ')', 'background-size': 'cover', 'background-repeat': 'no-repeat', 'background-position': 'center', 'width': '100%'} : {}">
+        <mat-card-header>
+            <mat-card-subtitle>{{ cityName }}</mat-card-subtitle>
+            <mat-card-title>Temperature: {{ currentWeather.temperature.value + currentWeather.temperature.units }}</mat-card-title>
+        </mat-card-header>
+    </mat-card-title-group>
+
+    <mat-card-content>
+        <div class = "first-column">
+            <span class="weather-text">
+                <span class="material-symbols-outlined">partly_cloudy_day</span>
+                <span>Cloud Cover: {{ currentWeather.cloudCover.value + currentWeather.cloudCover.units }}</span>
+            </span>
+
+            <span class="weather-text">
+                <span class="material-symbols-outlined">humidity_percentage</span>
+                <span>Humidity: {{ currentWeather.relative_humidity.value + currentWeather.relative_humidity.units }}</span>
+            </span>
+        </div>
+
+        <div class="second-column">
+            <span class="weather-text">
+                <span class="material-symbols-outlined">water_drop</span>
+                <span>Rain: {{ currentWeather.rain.value + currentWeather.rain.units }}</span>
+            </span>
+
+            <span class="weather-text">
+                <span class="material-symbols-outlined">air</span>
+                <span>Wind: {{ currentWeather.wind_speed.value + currentWeather.wind_speed.units }}</span>
+            </span>    
+        </div>
+    </mat-card-content>
+</mat-card>

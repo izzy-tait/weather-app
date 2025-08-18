@@ -1,0 +1,8 @@
+
+<div class="main-page">
+    <input type="text" class="round-input" id="search-city" placeholder="Search city" #city (keyup.enter)="onSearch(city.value)">
+    <div class="separator"></div>
+    <app-current-weather-card class="weather-card" [cityName]="cityName" [coordinates]="coordinates"></app-current-weather-card>
+</div>
+
+<router-outlet></router-outlet>
